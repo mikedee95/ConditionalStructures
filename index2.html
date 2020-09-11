@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let year = +prompt('Enter a Year')
+    let IsLeapYear = false
+    if (year%4==0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                IsLeapYear = true
+            }
+        } else IsLeapYear = true
+    }
+    if (IsLeapYear) {alert(year  + 'This is a lap year')}
+    else {alert(year + 'This is not a lap year')}
+
+</script>
+
+</body>
+</html>
