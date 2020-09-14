@@ -19,7 +19,14 @@
         var height = parseFloat(document.getElementById('height').value);
         var weight = parseFloat(document.getElementById('weight').value);
         var result = weight / (height * height);
-        document.getElementById("result").innerHTML = "Your BMI is : " + result
+        if (result < 18)
+            document.getElementById("result").innerHTML = "Your BMI is : " + result + ", you are underweight"
+        else if (result < 25.0)
+            document.getElementById("result").innerHTML = "Your BMI is : " + result + ", you are normal"
+        else if (result < 30.0)
+            document.getElementById("result").innerHTML = "Your BMI is : " + result + ", you are overweight"
+        else
+            document.getElementById("result").innerHTML = "Your BMI is : " + result + ", your are obese"
     }
 </script>
 </body>
